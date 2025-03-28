@@ -40,11 +40,9 @@ const productSchema = new mongoose.Schema({
         default: true
     },
     colors: [
-        {
-            black,
-            red,
-            green
-        }
+        "black",
+        "red",
+        "green",
     ],
     images: [
         "http://localhost:5008/profile/electron.jpg",
