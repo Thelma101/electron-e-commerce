@@ -37,7 +37,7 @@ const addProduct = async (req, res) => {
             stack: stack.error
         })
     }
-}
+};
 
 module.exports = {
     getAddProduct,
