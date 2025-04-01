@@ -1,3 +1,5 @@
+const Joi = require('joi');
+
 const productValidation = Joi.object({
     title: Joi.string().required(),
     description: Joi.string().required().message({
@@ -10,9 +12,15 @@ const productValidation = Joi.object({
         "string.empty": "Product color is required"
     }),
     price: Joi.number().required().message({
-        'number.empty': "Product price is required"
+        'number.empty': "Product price is required",
+        "number.min": "Product price must be greater than 0",
+        "any.required": "Product price is required"
     }),
-    stock: Joi.number().required().message({
-        "string.empty": "Product stock is required"
+    stock: Joi.number().min().required().message({
+        "string.empty": "Product stock is required",
+        "number.min": "Product stock must be greater than 1",
+        "any.required": " Stock is required"
     }),
 })
+
+module.exports = productValidation;
