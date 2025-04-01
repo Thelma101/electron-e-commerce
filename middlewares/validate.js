@@ -21,6 +21,6 @@ const productValidation = Joi.object({
         "number.min": "Product stock must be greater than 1",
         "any.required": " Stock is required"
     }),
-})
+});
 
 module.exports = productValidation;
