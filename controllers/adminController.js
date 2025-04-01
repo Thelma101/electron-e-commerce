@@ -50,10 +50,20 @@ const updateProduct = async (req, res) => {
         product.imageUrl = imageUrl;
         await product.save();
         res.redirect('/admin/products');
-} catch(errro) {
-    console.log(error);
-    res.
-}
+    } catch (errro) {
+        console.log(error);
+        res.render("error", {
+            pageTitle: "Error",
+            path: "/error",
+            error: error,
+            message: "Something went wrong. Please try again later.",
+            stack: stack.error
+        })
+    }
+};
+
+
+
 
 module.exports = {
     getAddProduct,
