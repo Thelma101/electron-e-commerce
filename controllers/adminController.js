@@ -39,6 +39,19 @@ const addProduct = async (req, res) => {
     }
 };
 
+const updateProduct = async (req, res) => {
+    try {
+        const { productId } = req.params;
+        const { title, price, description, imageUrl } = req.body;
+        const product = await Product.findById(productId);
+        product.title = title;
+        product.price = price;
+        product.description = description;
+        product.imageUrl = imageUrl;
+        await product.save();
+        res.redirect('/admin/products');
+}
+
 module.exports = {
     getAddProduct,
     addProduct
