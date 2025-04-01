@@ -50,6 +50,9 @@ const updateProduct = async (req, res) => {
         product.imageUrl = imageUrl;
         await product.save();
         res.redirect('/admin/products');
+} catch(errro) {
+    console.log(error);
+    res.
 }
 
 module.exports = {
