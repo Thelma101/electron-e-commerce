@@ -40,9 +40,9 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/', generalRoutes)
-app.use('/auth', authRoutes)
-app.use('/dashboard', accountRoutes)
+app.use('/', generalRoutes);
+app.use('/auth', authRoutes);
+app.use('/dashboard', accountRoutes);
 app.use('/admin', adminRoutes)
 
 
