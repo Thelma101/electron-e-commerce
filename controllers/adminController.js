@@ -1,4 +1,5 @@
 const product = require('../models/product');
+const { productValidation } = require("../middlewares/validate");
 
 const getAddProduct = async (req, res) => {
     try {
@@ -61,9 +62,6 @@ const updateProduct = async (req, res) => {
         })
     }
 };
-
-
-
 
 module.exports = {
     getAddProduct,

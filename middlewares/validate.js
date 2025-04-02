@@ -1,7 +1,9 @@
 const Joi = require('joi');
 
 const productValidation = Joi.object({
-    title: Joi.string().required(),
+    title: Joi.string().required().message({
+        'string.empty': "Product title is required"
+    }),
     description: Joi.string().required().message({
         'string.empty': "Product description is required"
     }),
@@ -20,7 +22,8 @@ const productValidation = Joi.object({
         "string.empty": "Product stock is required",
         "number.min": "Product stock must be greater than 1",
         "any.required": " Stock is required"
-    }),
+    })
 });
 
-module.exports = productValidation;
+module.exports = { productValidation };
+
