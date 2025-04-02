@@ -9,7 +9,7 @@ const generalRoutes = require('./routes/general');
 const accountRoutes = require('./routes/account');
 // const productRoutes = require('./routes/product'); 
 const authRoutes = require('./routes/auth');
-const adminRoutes = require('./routes/admin')
+const adminRoutes = require('./routes/admin');
 
 
 const PORT = process.env.PORT || 5001;
