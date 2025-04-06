@@ -32,6 +32,18 @@ const getContact = async (req, res) => {
     }
 };
 
+const getShop = async (req, res) => {
+    try {
+        res.render('shop');
+    } catch (error) {
+        res.status(500).json({
+            errorMessage: "Something went wrong, please try again later",
+            error: error.message,
+            stack: error.stack
+        })
+    }
+};
+
 const getAbout = async (req, res) => {
     try {
         res.render('about');
@@ -175,6 +187,7 @@ const getArticleDetails = async (req, res) => {
 
     module.exports = {
         getHome,
+        getShop,
         getAbout,
         getFaq,
         getSearch,
