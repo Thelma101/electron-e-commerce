@@ -52,6 +52,9 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 
+app.get('/shop', (req, res) => {
+    res.render('collection')
+})
 app.get('/about-us', (req, res) => {
     // res.sendFile(path.join(__dirname, 'views', 'index3.html'))
     res.render('about-us')

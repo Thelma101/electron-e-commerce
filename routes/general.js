@@ -1,5 +1,6 @@
 const {
     getHome,
+    getShop,
     getAbout,
     getContact,
     getFaq,
@@ -15,6 +16,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', getHome);
+router.get('/shop', getShop)
 router.get('/about', getAbout);
 router.get('/contact', getContact);
 router.get('/faq', getFaq);
