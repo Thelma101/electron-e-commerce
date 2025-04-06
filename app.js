@@ -52,12 +52,12 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 
-app.get('/about', (req, res) => {
+app.get('/about-us', (req, res) => {
     // res.sendFile(path.join(__dirname, 'views', 'index3.html'))
     res.render('about-us')
 });
 
-app.get('/contact', (req, res) => {
+app.get('/contact-us', (req, res) => {
     // res.sendFile(path.join(__dirname, 'views', 'index3.html'))
     res.render('contact-us')
 });
