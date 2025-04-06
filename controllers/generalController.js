@@ -34,7 +34,7 @@ const getContact = async (req, res) => {
 
 const getShop = async (req, res) => {
     try {
-        res.render('shop');
+        res.render('collection');
     } catch (error) {
         res.status(500).json({
             errorMessage: "Something went wrong, please try again later",

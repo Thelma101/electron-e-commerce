@@ -53,8 +53,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/shop', (req, res) => {
-    res.render('collection')
-})
+    res.render('shop')
+});
+
 app.get('/about-us', (req, res) => {
     // res.sendFile(path.join(__dirname, 'views', 'index3.html'))
     res.render('about-us')
